@@ -1,0 +1,270 @@
+/* Setting cơ bản CSS*/
+*,*:before,*:after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    /* 1rem =10px*/
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+button{
+    cursor: pointer;
+}
+input,textarea,button{
+    outline: none;
+    /* khi click chuột vào button mặc định có viền màu xanh nên bỏ đi */
+    box-shadow: none;
+    font-family: 'Roboto';
+}
+/*Wrapper*/
+.wrapper{
+    max-width: 136.6rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+/* Header*/
+header {
+    width: 100%;
+    height: 70rem;
+}
+.header__heading {
+    /* width: 124.6rem; */
+    height: 12.6rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 6rem;
+    align-items: center;
+}
+.header__heading-textL {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.header__heading-textR {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.header__img {
+    width: 118rem;
+    height: 57.4rem;
+    background-color: aqua;
+    margin: 0 auto;
+}
+.obj-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/* Pagination*/
+.pagination {
+    width: 100%;
+    height: 10.7rem;
+    display: flex;
+    justify-content: center;
+}
+.pagi__list {
+    display: flex;
+    margin-top: 2.2rem;
+    text-align: center;
+}
+.pagi__list-item {
+    border-radius: 50%;
+    background-color: #d5d5d5;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 1rem 0;
+}
+.pagi__list-item:last-child {
+    background-color: #161616;
+}
+/* content */
+.content {
+    width: 118rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+/* CSS chung cho h1 va p*/
+h1{
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #161616;
+}
+p {
+    font-size: 1.7rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #545454;
+}
+/* ProjectTitle */
+.ProjectTitle {
+    height: 38.2rem;
+    width: 100%;
+    display: flex;
+}
+.PT__img {
+    width: 50%;
+    height: 100%;
+    padding: 0 1.8rem 0;
+}
+.PT__Text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.PT__Text-heading {
+    margin-bottom: 10rem;
+}
+.PT__Text-content {
+    width: 37.2rem;
+    margin: 0 auto;
+}
+/* ProjectDate */
+.ProjectDate{
+    height: 44rem;
+    width: 100%;
+    display: flex;
+}
+.PD__Text1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.PD__Text2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.PD__Text-heading {
+    margin-top: 13.8rem;
+}
+.PD__Text-content {
+    margin-top: 4.5rem;
+    margin-left: 1.5rem;
+}
+/* Image3 */
+.Image3 {
+    height: 27.6rem;
+    display: flex;
+    justify-content: center;
+}
+.Image3__list {
+    width: 100%;
+    margin: 0 1.8rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.Image3__list-item {
+    width: 36.8rem;
+    height: 100%;
+}
+/* ProjectRole */
+/* Image2 */
+.Image2 {
+    height: 43.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Image2__list {
+    width: 100%;
+    height: 100%;
+    padding: 0 1.8rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.Image2__list-item {
+    width: 55.4rem;
+    height: 100%;  
+}
+/* Image1*/
+.Image1 {
+    width: 100%;
+    height: 57.4rem;
+    margin-top: 3rem;
+    padding: 0 1.8rem 0;
+    display: flex;
+}
+/* button*/
+button{
+    width: 19.3rem;
+    height: 4.3rem;
+    margin: 9.5rem auto 11rem;
+    border: 1.5px double #161616;
+    color: #161616;
+    background-color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: 700; 
+}
+footer {
+    height: 37.5rem;
+    width: 118rem;
+    margin: 0 auto;
+    display: flex;
+}
+.footer__div1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    padding: 0 7.4rem 0;
+    justify-content: space-between;
+}
+/* CSS chung cho a của phần footer*/
+footer a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.3;
+    color: #999999;   
+}
+.div2__list {
+    margin-left: 18.2rem;
+}
+.list-address-item:first-child a{
+    color: #161616;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

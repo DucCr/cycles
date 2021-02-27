@@ -1,0 +1,500 @@
+/* Các bước cài đặt cơ bản CSS */
+*,*:before,*:after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    /* 1rem=10px */
+}
+body{
+    font-family: 'Lato',sans-serif;
+    line-height: 1;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+input,textarea,button{
+    outline: none;
+    /* khi click chuột vào button mặc định có viền màu xanh nên bỏ đi */
+    box-shadow: none;
+    font-family: 'Lato',sans-serif;
+}
+/* Khai báo biến */
+:root{
+    --nenText : #f7f7f7;
+    --nenXanh : #61ab93;
+    --text : #848789;
+}
+li{
+    list-style-type: none;
+}
+/* Phần main*/
+.wrapper {
+    max-width: 160rem;
+    margin: 0 auto;
+}
+header{
+    min-height: 80rem;
+    width: 100%;
+    background-image: url('ps/img2.jpg');
+    background-size: cover;
+    background-position: center center;  
+    display: flex;
+    justify-content: center;
+}
+header .nav{
+    margin-top: 3.5rem;
+}
+header .nav__list{    
+    display: flex;
+    /* justify-content: center; căn các khối ra giữa và cách đều nhau theo trục dọc nếu flex row 
+    và trục ngang nếu flex colum*/
+    /* align-item căn chỉnh các khổi trong flax cách đều trên dưới 1 khoảng */
+    align-items: center;
+    /*2 thuoc tính này phải đi với nhau
+    justify-content: center chỉ có tác dụng với các khối mà cha nó gọi thuộc tính display:flex
+    */
+    
+}
+header .nav__list li {
+    list-style-type: none;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    letter-spacing: 2px;
+    position: relative;
+}
+header .nav__list li:first-child::after{
+    content: ".";
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* so với thằng cha position :relative là các li ở trên*/
+}
+header .nav__list li:nth-child(4):after{
+    content: ".";
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* so với thằng cha position :relative là các li ở trên*/
+}
+header .nav__list .nav__link{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #585464;
+}
+/* CSS content-text */
+.nav__content-text{
+    height: 47rem;
+    width: 100%;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+}
+.content__text .nav__content-text .content-text__list{
+    font-display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 11.7rem;
+}
+.p__title{
+    margin-top: 3.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #353738;
+    letter-spacing: 0.5rem;
+}
+.p__text{
+    margin-top: 3.5rem;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #848789;
+    text-align: center;
+    max-width: 108rem;
+}
+.content__cha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.div__image {
+    width: 67%;
+    height: 60rem;
+    position: relative;
+}
+ .bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: relative;
+    z-index: 1;
+}
+.div__image .lg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.content__con1 {
+    display: flex;
+    flex-flow: row wrap;
+    height: 60rem;
+    width: 100%;
+    overflow: hidden;
+}
+.div__content {
+    width: 33%;
+    height: 60rem;
+}
+.div__content ul .ct {
+    /* height: 33%; */
+    width: 100%;
+    margin-bottom: 0rem;
+}
+.div__content ul {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 60rem;
+}
+.logo5{
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+}
+.a1__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    margin-bottom: 2.6rem;
+    text-transform: uppercase;
+    color: #353738;
+}
+.a1__content {
+    width: 39.7rem;
+    color: #8c8f91;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2;
+    text-align: justify;
+    padding-bottom:11rem;
+    margin-left: 2.4rem;
+    position: relative;
+}
+.a1__content:after{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    content: "";
+    transform: translate(-50%, 50%) rotate(45deg);
+    z-index: 10;
+    background-color: white;
+}
+.a1__content:after{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    content: "";
+    transform: translate(-50%, 50%) rotate(45deg);
+    z-index: 10;
+    background-color: white;
+}
+.content__con2 {
+    display: flex;
+    justify-content: center;
+}
+.content__con2 .div__image {
+    order: 2;
+}
+.content__con2 .div__content {
+    order: 1;
+}
+.content__con3 {
+    display: flex;
+    flex-flow: row wrap;
+    height: 60rem;
+    width: 100%;
+    overflow: hidden;
+}
+.content__con3 .div__image{
+    width:33%;
+    height: 100%;
+}
+.content__con3 .div__image-bottom {
+    height: 100%;
+    width: 34%;
+    background-color: antiquewhite;
+}
+/* CSS TWEET*/
+.tweet {
+    padding: 12.5rem 1.5rem 6.8rem;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+.tweet__icon{
+    color: #56c7ee;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+}
+.tweet__heading {
+    font-size: 1.8 rem;
+    margin-bottom: 2.7 rem;
+}
+.tweet__location , .tweet__author {
+    font-weight: bold;
+    color: #353738;
+}
+.tweet__time{
+    font-weight: 300;
+    color: #848789;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    position: relative;
+}
+.tweet__time::before{
+    content: "/";
+    color: #848789;
+    position: absolute;
+    left: 0;
+}
+.tweet__content {
+    max-width: 104rem;
+    margin : 2.8rem auto 10.2rem;
+    font-size: 2.4rem;
+    font-style: italic;
+    color: #848789;
+    line-height: 1.6;
+}
+.tweet__pagi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tweet__pagi-item {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid #848789;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.tweet__pagi-item:first-child {
+    background-color: #848789;
+}
+/* CSS Image Shop*/
+.imgshop {
+    height: 534px;
+    width: 100%;
+    display: flex;
+    background-color: #61ab93;
+}
+/* dev 1*/
+.imgshop__div-p1 {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.div-p1__top {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+.div-p1__top img {
+    width: 50%;
+    height: 100%;
+}
+.div-p1__bottom {
+    width: 100%;
+    height: 50%;
+}
+.div-p1__bottom img{
+    width: 100%;
+    height: 100%;
+}
+/* dev 2*/
+.imgshop__div-p2 {
+    width: 17%;
+    height: 100%;
+}
+.imgshop__div-p2 img {
+    width: 100%;
+    height: 100%;
+}
+/* dev 3*/
+.imgshop__div-p3 {
+    width: 17%;
+    height: 100%;
+}
+.imgshop__div-p3 img {
+    width: 100%;
+    height: 100%;
+}
+/*dev 4*/
+.imgshop__div-p4 {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+/* đổi vị trí top và bottom*/
+.order1 {
+    order: 2;
+}
+.order2 {
+    order: 1;
+    background-color: #71b495;
+}
+.imgshop__div-p4 .bg {
+    position: relative;
+    z-index: 1;
+}
+/* sửa lại logo về ban đầu*/
+.imgshop__div-p4 .lg {
+    width: auto;
+    height: auto;
+    opacity: 1;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.imgshop__div-p4 .div-p1__bottom {
+    display: block;
+    position: relative;
+}
+.opacity-img {
+    opacity: 0.2;
+}
+/* CSS Discover*/
+.discover {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    background-color: #282f35;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.discover__button {
+    display: block;
+    box-sizing: inherit;
+}
+.button__link {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    align-content: center;  
+    border : 0.1px solid #94979a;
+    letter-spacing: 0.5rem;
+    padding: 2rem 6.4rem 2rem;
+}
+/* CSS email*/
+.email {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ffffff;
+}
+.email__logo {
+    margin-top: 10.8rem;
+    margin-bottom: 3.7rem;
+}
+.email__text{
+    font-size: 2.4rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #848789;
+    margin-bottom: 3.6rem;
+}
+/*Form email*/
+input{
+    width: 40rem;
+    height: 6.7rem;
+    border: 1px solid #d3d7d9;
+    font-size: 2rem;
+    font-weight: 250;
+    font-style: italic;
+    color: #d3d7d9;
+    padding-left: 2.8rem;
+}
+button {
+    width: 12.6rem;
+    height: 6.9rem;
+    margin-left: 1rem;
+    background-color: #64c29e;
+    font-weight: lighter;
+    color: white;
+    font-size: 2.4rem;
+}
+.email__div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 11.1rem;
+}
+/* footer*/
+.footer {
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    background-color: #f7f7f7;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.footer__diachi-heading {
+    margin-bottom: 0.7rem;
+    font-size:2rem ;
+    font-weight: 700;
+    color: #848789;
+    width: 24rem;
+
+}
+.footer__diachi-italic {
+    color: #848789;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.4;
+    font-style: italic;
+    width: 24rem;
+    
+}
+.footer__icon {
+    display: flex;
+}
+.footer__icon-vecto {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+.footer__logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.footer__logo-text {
+    font-size: 13.9pt;
+    color: #848789;
+    font-style: italic;
+}
+.footer__logo img {
+    margin-left: 2rem;
+}
